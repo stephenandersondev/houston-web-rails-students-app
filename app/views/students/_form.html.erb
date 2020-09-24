@@ -1,0 +1,14 @@
+<%= form_for @student do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br><br/>
+    <%= f.label :major %>
+    <%= f.text_field :major %>
+    <br><br/>
+     <%= f.label :age %>
+    <%= f.number_field :age %>
+    <br><br/>
+    <%= f.collection_select :instructor_id, @instructors, :id, :name, {include_blank: 'Select an Instructor'} %>
+    <br><br/>
+    <%= f.submit %>
+<% end %>

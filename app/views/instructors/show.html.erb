@@ -1,0 +1,6 @@
+<h1>Instructor</h1>
+
+<h2><%= @instructor.name %></h2>
+
+<%= button_to "delete", {:controller => :instructors,
+      :action => 'destroy', :id => @instructor.id }, :method => :delete %>
